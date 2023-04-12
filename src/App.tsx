@@ -16,7 +16,7 @@ function App() {
     const canvas = document.querySelector("canvas");
     if (canvas) {
       const link = document.createElement("a");
-      link.download = "myimage.png";
+      link.download = "i-vote-mfp-2023.png";
       link.href = canvas.toDataURL();
       link.click();
     }
@@ -24,7 +24,9 @@ function App() {
   return (
     <div className="flex flex-col">
       <header className="flex mt-36 mb-10 flex-col items-center">
-        <div className="text-8xl font-anakotmai-light text-anakotmai-orange">ฉันเลือก ก้าวไกล</div>
+        <div className="text-8xl font-anakotmai-light text-anakotmai-orange">
+          ฉันเลือก ก้าวไกล
+        </div>
         <div className="block text-md font-anakotmai-light text-white font-normal">
           เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ
         </div>
@@ -43,9 +45,14 @@ function App() {
       </div>
       <div className="flex justify-center mt-24">
         <ImageUploader onUpload={handleUpload} />
-        <button onClick={handleSave} className="ml-4 bg-anakotmai-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded font-anakotmai-light">
-          บันทึกรูปภาพ
-        </button>
+        {image && (
+          <button
+            onClick={handleSave}
+            className="ml-4 bg-anakotmai-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded font-anakotmai-light"
+          >
+            บันทึกรูปภาพ
+          </button>
+        )}
       </div>
     </div>
   );
