@@ -28,7 +28,7 @@ function App() {
           ฉันเลือก ก้าวไกล
         </div>
         <div className="block text-md font-anakotmai-light text-white font-normal">
-          เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ
+          เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ และติด #ชวนที่บ้านกาก้าวไกล หรือ #กาก้าวไกลประเทศไทยไม่เหมือนเดิม
         </div>
       </header>
       <div className="flex justify-center">
