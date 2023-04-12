@@ -20,6 +20,15 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
   useEffect(() => {
     onChange(frameName);
   }, [frameName]);
+
+  const imgSizeProps = !mediumScreen ? {
+    width: '70px',
+    height: '40px',
+  } : {
+    width: '50px',
+    height: '20px'
+  }
+  
   return (
     <div
       className={classNames("bg-slate-300", "justify-between", { "ml-4": !mediumScreen, "mt-4": mediumScreen}, "flex", {
@@ -28,48 +37,42 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
     >
       <img
         src={frameOne}
-        width="70px"
-        height="40px"
+        {...imgSizeProps}
         alt="1"
         className="cursor-pointer bg-red"
         onClick={() => setFrameName("1")}
       />
       <img
         src={frameTwo}
-        width="70px"
-        height="40px"
+        {...imgSizeProps}
         alt="2"
         className="cursor-pointer"
         onClick={() => setFrameName("2")}
       />
       <img
         src={frameThree}
-        width="70px"
-        height="40px"
+        {...imgSizeProps}
         alt="3"
         className="cursor-pointer"
         onClick={() => setFrameName("3")}
       />
       <img
         src={frameFour}
-        width="70px"
-        height="40px"
+        {...imgSizeProps}
         alt="4"
         className="cursor-pointer"
         onClick={() => setFrameName("4")}
       />
       <img
         src={frameFive}
-        width="70px"
-        height="40px"
+        {...imgSizeProps}
         alt="5"
         className="cursor-pointer"
         onClick={() => setFrameName("5")}
       />
       <img
         src={frameSix}
-        width="70px"
-        height="40px"
+        {...imgSizeProps}
         alt="6"
         className="cursor-pointer"
         onClick={() => setFrameName("6")}
