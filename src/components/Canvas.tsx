@@ -41,16 +41,19 @@ function Canvas(props: ICanvasProps) {
     const context = canvas?.getContext("2d");
     if (canvas && context) {
       context.clearRect(0, 0, canvas.width, canvas.height);
-      const image1 = new Image();
-      image1.src = !isEmpty(image) ? image : frameKaitom;
+      const imageFromUser = new Image();
+      imageFromUser.src = !isEmpty(image) ? image : frameKaitom;
+      imageFromUser.onload = () => {
+        context.drawImage(imageFromUser, 0, 0, canvas.width, canvas.height);
+        context.drawImage(imageFrame, 0, 0, canvas.width, canvas.height);
+      }
+      const imageFrame = new Image();
+      imageFrame.src = handleImageFrame(frameName);
 
-      const image2 = new Image();
-      image2.src = handleImageFrame(frameName);
-
-      image2.onload = () => {
+      imageFrame.onload = () => {
         context.globalAlpha = 1;
-        context.drawImage(image1, 0, 0, canvas.width, canvas.height);
-        context.drawImage(image2, 0, 0, canvas.width, canvas.height);
+        context.drawImage(imageFromUser, 0, 0, canvas.width, canvas.height);
+        context.drawImage(imageFrame, 0, 0, canvas.width, canvas.height);
       };
     }
   }, [frameName, image]);
