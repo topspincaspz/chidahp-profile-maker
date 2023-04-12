@@ -4,6 +4,7 @@ import Canvas from "./components/Canvas";
 import ChooseFrameBox from "./components/ChooseFrameBox";
 import { useMediaQuery } from "react-responsive";
 import classNames from "classnames";
+import CanvasHidden from "./components/CasvasHidden";
 
 function App() {
   const [image, setImage] = useState<string>("");
@@ -17,7 +18,7 @@ function App() {
   };
 
   const handleSave = () => {
-    const canvas = document.querySelector("canvas");
+    const canvas = document.querySelector("#canvas-hidden") as HTMLCanvasElement;
     if (canvas) {
       const link = document.createElement("a");
       link.download = "i-vote-mfp-2023.png";
@@ -56,6 +57,7 @@ function App() {
       >
         <div>
           <Canvas image={image} frameName={frameName} />
+          <CanvasHidden image={image} frameName={frameName} />
         </div>
         <div>
           <ChooseFrameBox

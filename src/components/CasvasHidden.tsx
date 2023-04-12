@@ -14,7 +14,7 @@ interface ICanvasProps {
   frameName?: string | null;
 }
 
-function Canvas(props: ICanvasProps) {
+function CanvasHidden(props: ICanvasProps) {
   const { image, frameName = null } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mediumScreen = useMediaQuery({
@@ -60,14 +60,7 @@ function Canvas(props: ICanvasProps) {
     }
   }, [frameName, image, mediumScreen]);
 
-  const sizeCanvasProps = !mediumScreen ? {
-    width: '420',
-    height: '420'
-  } : {
-    width: '320',
-    height: '320'
-  }
-  return <canvas ref={canvasRef} {...sizeCanvasProps} style={{ width: '900', height: '900' }}/>;
+  return <canvas ref={canvasRef} width="900" height="900" style={{ display: 'none' }} id="canvas-hidden"/>;
 }
 
-export default Canvas;
+export default CanvasHidden;
