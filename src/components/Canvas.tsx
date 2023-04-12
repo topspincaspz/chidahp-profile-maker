@@ -5,17 +5,19 @@ import frameThree from "../assets/frame/frame2023-03.png";
 import frameFour from "../assets/frame/frame2023-04.png";
 import frameFive from "../assets/frame/frame2023-05.png";
 import frameSix from "../assets/frame/frame2023-06.png";
+import frameKaitom from "../assets/frame/frame2023-kaitom.png";
+import { isEmpty } from "lodash";
 
 interface ICanvasProps {
   image: string;
-  frameName?: string;
+  frameName?: string | null;
 }
 
 function Canvas(props: ICanvasProps) {
-  const { image, frameName = "4" } = props;
+  const { image, frameName = null } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const handleImageFrame = (file: string) => {
+  const handleImageFrame = (file: string | null) => {
     switch (file) {
       case "1":
         return frameOne;
@@ -40,14 +42,10 @@ function Canvas(props: ICanvasProps) {
     if (canvas && context) {
       context.clearRect(0, 0, canvas.width, canvas.height);
       const image1 = new Image();
-      image1.src = image;
+      image1.src = !isEmpty(image) ? image : frameKaitom;
 
       const image2 = new Image();
       image2.src = handleImageFrame(frameName);
-
-      image1.onload = () => {
-        context.drawImage(image1, 0, 0, canvas.width, canvas.height);
-      };
 
       image2.onload = () => {
         context.globalAlpha = 1;
@@ -55,7 +53,7 @@ function Canvas(props: ICanvasProps) {
         context.drawImage(image2, 0, 0, canvas.width, canvas.height);
       };
     }
-  }, [frameName]);
+  }, [frameName, image]);
 
   return <canvas ref={canvasRef} width="400" height="400" />;
 }

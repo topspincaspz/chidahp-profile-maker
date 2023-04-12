@@ -41,7 +41,12 @@ function App() {
           />
         </div>
       </div>
-      <ImageUploader onUpload={handleUpload} />
+      <div className="flex justify-center mt-24">
+        <ImageUploader onUpload={handleUpload} />
+        <button onClick={handleSave} className="ml-4 bg-anakotmai-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded font-anakotmai-light">
+          บันทึกรูปภาพ
+        </button>
+      </div>
     </div>
   );
 }

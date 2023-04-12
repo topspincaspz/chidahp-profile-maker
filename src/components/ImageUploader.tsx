@@ -22,7 +22,7 @@ export default function ImageUploader({ onUpload }: IImageUploader) {
     inputFileRef?.current.click()
   }
   return (
-    <div className="flex justify-center mt-24">
+    <div>
       <input type="file" accept="image/*" onChange={handleUpload} className="hidden" ref={inputFileRef} />
       <button onClick={handleClickUpload} className="bg-anakotmai-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded font-anakotmai-light">
         เลือกรูปภาพของคุณ

@@ -535,6 +535,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4":
+  version: 4.14.192
+  resolution: "@types/lodash@npm:4.14.192"
+  checksum: b04e16a4ba1d3a9be73c806214d6ad3ac630afd7bd1222bb5e4ac1d90bbfef1a2e0d6aac3c8733b23bcdfa6f3ebee5817e66df465ada132c2eedc55d31bc45c3
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
@@ -1480,6 +1487,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: 3ac18e92108d68f88429fcddee609e42cf2b653583d9bac22308815a4cd6b185b89a0ad0d9b0c670c371d9d6b61571a98fee6b36e1db14e52766ca253ed9cba0
+  languageName: node
+  linkType: hard
+
 "loose-envify@npm:^1.1.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -1555,6 +1569,25 @@ __metadata:
   checksum: d58d7c31e24ccb93509def2af306eca9a55ad8b8862a26ea7deda3c9338e5d33365f57197ad37af68c319e5e2a1faf089e5d05894d0dc29ff07025b30b8ff8b0
   languageName: node
   linkType: hard
+
+"mfp-profile-maker@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "mfp-profile-maker@workspace:."
+  dependencies:
+    "@types/lodash": "npm:^4"
+    "@types/react": "npm:^18.0.28"
+    "@types/react-dom": "npm:^18.0.11"
+    "@vitejs/plugin-react": "npm:^3.1.0"
+    autoprefixer: "npm:^10.4.14"
+    lodash: "npm:^4.17.21"
+    postcss: "npm:^8.4.21"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    tailwindcss: "npm:^3.3.1"
+    typescript: "npm:^4.9.3"
+    vite: "npm:^4.2.0"
+  languageName: unknown
+  linkType: soft
 
 "micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
   version: 4.0.5
@@ -2183,23 +2216,6 @@ __metadata:
   checksum: 4496d29f371909dbc27dfb302f31cadc70b6f1591b2b433337daf923fac30e9632523e169494b40d06b53228166a577875a3610bce3412de8bb600152f748a9c
   languageName: node
   linkType: hard
-
-"ssj-meme-generator@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "ssj-meme-generator@workspace:."
-  dependencies:
-    "@types/react": "npm:^18.0.28"
-    "@types/react-dom": "npm:^18.0.11"
-    "@vitejs/plugin-react": "npm:^3.1.0"
-    autoprefixer: "npm:^10.4.14"
-    postcss: "npm:^8.4.21"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    tailwindcss: "npm:^3.3.1"
-    typescript: "npm:^4.9.3"
-    vite: "npm:^4.2.0"
-  languageName: unknown
-  linkType: soft
 
 "ssri@npm:^9.0.0":
   version: 9.0.1
