@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import ImageUploader from "./components/ImageUploader";
 import Canvas from "./components/Canvas";
 import ChooseFrameBox from "./components/ChooseFrameBox";
@@ -28,7 +27,7 @@ function App() {
   };
   return (
     <div className="flex flex-col">
-      <header className="flex mt-36 mb-10 flex-col items-center">
+      <header className={classNames("flex", "flex-col", "items-center", "mb-10", { "mt-36": !mediumScreen, "mt-24": mediumScreen})}>
         <div
           className={classNames(
             "font-anakotmai-light",
@@ -66,7 +65,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="flex justify-center mt-24">
+      <div  className={classNames("flex", "justify-center", { "mt-24": !mediumScreen, "mt-16": mediumScreen })}>
         <ImageUploader onUpload={handleUpload} />
         {image && (
           <button

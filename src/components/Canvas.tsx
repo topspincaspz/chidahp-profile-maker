@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import frameOne from "../assets/frame/frame2023-01.png";
 import frameTwo from "../assets/frame/frame2023-02.png";
 import frameThree from "../assets/frame/frame2023-03.png";
@@ -39,7 +39,7 @@ function Canvas(props: ICanvasProps) {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas?.getContext("2d");
     if (canvas && context) {
