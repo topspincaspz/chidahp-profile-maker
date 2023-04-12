@@ -17,10 +17,10 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
     onChange(frameName)
   }, [frameName])
   return (
-    <div>
+    <div className="bg-slate-300 ml-4">
       <img
         src={frameOne}
-        width="60px"
+        width="70px"
         height="40px"
         alt="1"
         className="cursor-pointer"
@@ -28,7 +28,7 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
       />
       <img
         src={frameTwo}
-        width="60px"
+        width="70px"
         height="40px"
         alt="2"
         className="cursor-pointer"
@@ -36,7 +36,7 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
       />
       <img
         src={frameThree}
-        width="60px"
+        width="70px"
         height="40px"
         alt="3"
         className="cursor-pointer"
@@ -44,7 +44,7 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
       />
       <img
         src={frameFour}
-        width="60px"
+        width="70px"
         height="40px"
         alt="4"
         className="cursor-pointer"
@@ -52,7 +52,7 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
       />
       <img
         src={frameFive}
-        width="60px"
+        width="70px"
         height="40px"
         alt="5"
         className="cursor-pointer"
@@ -60,7 +60,7 @@ function ChooseFrameBox({ onChange }: IChooseFrameBoxProps) {
       />
       <img
         src={frameSix}
-        width="60px"
+        width="70px"
         height="40px"
         alt="6"
         className="cursor-pointer"

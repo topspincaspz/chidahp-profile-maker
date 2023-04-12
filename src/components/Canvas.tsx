@@ -58,7 +58,7 @@ function Canvas(props: ICanvasProps) {
     }
   }, [frameName, image]);
 
-  return <canvas ref={canvasRef} width="400" height="400" />;
+  return <canvas ref={canvasRef} width="420" height="420" />;
 }
 
 export default Canvas;

@@ -31,7 +31,7 @@ function App() {
           เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ และติด #ชวนที่บ้านกาก้าวไกล หรือ #กาก้าวไกลประเทศไทยไม่เหมือนเดิม
         </div>
       </header>
-      <div className="flex justify-center">
+      <div className="flex justify-center  items-center">
         <div>
           <Canvas image={image} frameName={frameName} />
         </div>
