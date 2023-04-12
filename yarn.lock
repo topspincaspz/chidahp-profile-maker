@@ -836,6 +836,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: ecbd166e986b9095e01eba91958907ed43026e35aac98d667a9e958642795632c15a88f36785c66bcfbe05df32e47c1575d22faa46c29de271b013eb00202498
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -1602,6 +1609,7 @@ __metadata:
     "@types/react-dom": "npm:^18.0.11"
     "@vitejs/plugin-react": "npm:^3.1.0"
     autoprefixer: "npm:^10.4.14"
+    classnames: "npm:^2.3.2"
     lodash: "npm:^4.17.21"
     postcss: "npm:^8.4.21"
     react: "npm:^18.2.0"

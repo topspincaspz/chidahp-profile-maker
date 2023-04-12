@@ -3,9 +3,14 @@ import "./App.css";
 import ImageUploader from "./components/ImageUploader";
 import Canvas from "./components/Canvas";
 import ChooseFrameBox from "./components/ChooseFrameBox";
+import { useMediaQuery } from "react-responsive";
+import classNames from "classnames";
 
 function App() {
   const [image, setImage] = useState<string>("");
+  const mediumScreen = useMediaQuery({
+    query: "(max-width: 720px)",
+  });
   const [frameName, setFrameName] = useState<string>("");
 
   const handleUpload = (dataUrl: string) => {
@@ -24,14 +29,32 @@ function App() {
   return (
     <div className="flex flex-col">
       <header className="flex mt-36 mb-10 flex-col items-center">
-        <div className="text-8xl font-anakotmai-light text-anakotmai-orange">
+        <div
+          className={classNames(
+            "font-anakotmai-light",
+            "text-anakotmai-orange",
+            { "text-8xl": !mediumScreen },
+            { "text-4xl": mediumScreen }
+          )}
+        >
           ฉันเลือก ก้าวไกล
         </div>
-        <div className="block text-md font-anakotmai-light text-white font-normal">
-          เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ และติด #ชวนที่บ้านกาก้าวไกล หรือ #กาก้าวไกลประเทศไทยไม่เหมือนเดิม
+        <div
+          className={classNames("font-anakotmai-light", "text-white", "block", "text-center", {
+            "text-md": !mediumScreen,
+            "text-sm": mediumScreen,
+            "text-center mt-4": mediumScreen
+          })}
+        >
+          <span> เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ</span>
+          <span className="block">และติด #ชวนที่บ้านกาก้าวไกล หรือ #กาก้าวไกลประเทศไทยไม่เหมือนเดิม</span>
         </div>
       </header>
-      <div className="flex justify-center  items-center">
+      <div
+        className={classNames("flex", "justify-center", "items-center", {
+          "flex-col": mediumScreen,
+        })}
+      >
         <div>
           <Canvas image={image} frameName={frameName} />
         </div>

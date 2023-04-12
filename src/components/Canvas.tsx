@@ -7,6 +7,7 @@ import frameFive from "../assets/frame/frame2023-05.png";
 import frameSix from "../assets/frame/frame2023-06.png";
 import frameKaitom from "../assets/frame/frame2023-kaitom.png";
 import { isEmpty } from "lodash";
+import { useMediaQuery } from "react-responsive";
 
 interface ICanvasProps {
   image: string;
@@ -16,7 +17,9 @@ interface ICanvasProps {
 function Canvas(props: ICanvasProps) {
   const { image, frameName = null } = props;
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
+  const mediumScreen = useMediaQuery({
+    query: "(max-width: 720px)",
+  });
   const handleImageFrame = (file: string | null) => {
     switch (file) {
       case "1":
@@ -56,9 +59,16 @@ function Canvas(props: ICanvasProps) {
         context.drawImage(imageFrame, 0, 0, canvas.width, canvas.height);
       };
     }
-  }, [frameName, image]);
+  }, [frameName, image, mediumScreen]);
 
-  return <canvas ref={canvasRef} width="420" height="420" />;
+  const sizeCanvasProps = !mediumScreen ? {
+    width: '420',
+    height: '420'
+  } : {
+    width: '320',
+    height: '320'
+  }
+  return <canvas ref={canvasRef} {...sizeCanvasProps} />;
 }
 
 export default Canvas;
