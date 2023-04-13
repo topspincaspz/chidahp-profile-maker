@@ -28,7 +28,7 @@ function App() {
   };
   return (
     <div className="flex flex-col">
-      <header className={classNames("flex", "flex-col", "items-center", "mb-10", { "mt-36": !mediumScreen, "mt-24": mediumScreen})}>
+      <header className={classNames("flex", "flex-col", "items-center", "mb-10", { "mt-24": !mediumScreen, "mt-16": mediumScreen})}>
         <div
           className={classNames(
             "font-anakotmai-light",
@@ -67,7 +67,7 @@ function App() {
           />
         </div>
       </div>
-      <div  className={classNames("flex", "justify-center", { "mt-24": !mediumScreen, "mt-16": mediumScreen })}>
+      <div  className={classNames("flex", "justify-center", { "mt-24": !mediumScreen, "mt-16": mediumScreen, "mb-4": !mediumScreen || mediumScreen })}>
         <ImageUploader onUpload={handleUpload} />
         {image && (
           <button
