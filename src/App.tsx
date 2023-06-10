@@ -5,7 +5,12 @@ import ChooseFrameBox from "./components/ChooseFrameBox";
 import { useMediaQuery } from "react-responsive";
 import classNames from "classnames";
 import CanvasHidden from "./components/CasvasHidden";
+import { tv } from "tailwind-variants";
 
+
+const header = tv({
+  base: "font-anakotmai-light text-anakotmai-orange"
+})
 function App() {
   const [image, setImage] = useState<string>("");
   const mediumScreen = useMediaQuery({
@@ -30,9 +35,7 @@ function App() {
     <div className="flex flex-col">
       <header className={classNames("flex", "flex-col", "items-center", "mb-10", { "mt-24": !mediumScreen, "mt-16": mediumScreen})}>
         <div
-          className={classNames(
-            "font-anakotmai-light",
-            "text-anakotmai-orange",
+          className={classNames(header(),
             { "text-8xl": !mediumScreen },
             { "text-4xl": mediumScreen }
           )}

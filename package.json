@@ -15,7 +15,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-easy-crop": "^4.7.4",
-    "react-responsive": "^9.0.2"
+    "react-responsive": "^9.0.2",
+    "tailwind-variants": "^0.1.6"
   },
   "devDependencies": {
     "@types/lodash": "^4",
