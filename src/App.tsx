@@ -40,7 +40,7 @@ function App() {
             { "text-4xl": mediumScreen }
           )}
         >
-          ฉันเลือก ก้าวไกล
+          นักเรียนชูโล่สายไหนที่เหมาะกับคุณ!
         </div>
         <div
           className={classNames("font-anakotmai-light", "text-white", "block", "text-center", {
