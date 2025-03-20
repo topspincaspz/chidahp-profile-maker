@@ -49,8 +49,8 @@ function App() {
             "text-center mt-4": mediumScreen
           })}
         >
-          <span> เลือก Frame ฉันเลือก ก้าวไกล ที่เหมาะกับ สไตล์คุณ</span>
-          <span className="block">และติด #ชวนที่บ้านกาก้าวไกล หรือ #กาก้าวไกลประเทศไทยไม่เหมือนเดิม</span>
+          <span> เลือก Frame ชูโล่สายที่เหมาะกับคุณ</span>
+          <span className="block">และ Share รูปภาพของคุณกับเพื่อนๆ กัน อย่าลืมติด #ชี้ดาบ #ชูโล่วิทยาคม</span>
         </div>
       </header>
       <div
