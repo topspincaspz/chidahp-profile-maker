@@ -9,14 +9,20 @@ import { tv } from "tailwind-variants";
 
 
 const header = tv({
-  base: "font-anakotmai-light text-anakotmai-orange"
+  base: "font-anakotmai-light text-anakotmai-black"
 })
 function App() {
   const [image, setImage] = useState<string>("");
   const mediumScreen = useMediaQuery({
     query: "(max-width: 720px)",
   });
+  const smallScreen = useMediaQuery({
+    query: "(max-width: 480px)",
+  });
   const [frameName, setFrameName] = useState<string>("");
+  const largeScreen = useMediaQuery({
+    query: "(min-width: 1024px)",
+  });
 
   const handleUpload = (dataUrl: string) => {
     setImage(dataUrl);
@@ -31,14 +37,21 @@ function App() {
       link.click();
     }
   };
+
+  // Adjust styles for different screen sizes
+  const headerSize = classNames(header(),
+    { "text-6xl": largeScreen },
+    { "text-4xl": !largeScreen && !mediumScreen },
+    { "text-2xl": mediumScreen },
+    { "text-xl": smallScreen },
+    { "word-spacing-1": true }
+  );
+
   return (
     <div className="flex flex-col">
-      <header className={classNames("flex", "flex-col", "items-center", "mb-10", { "mt-24": !mediumScreen, "mt-16": mediumScreen})}>
+      <header className={classNames("flex", "flex-col", "items-center", "mb-10", { "mt-24": largeScreen, "mt-20": !largeScreen && !mediumScreen, "mt-16": mediumScreen, "mt-12": smallScreen })}>
         <div
-          className={classNames(header(),
-            { "text-8xl": !mediumScreen },
-            { "text-4xl": mediumScreen }
-          )}
+          className={headerSize}
         >
           นักเรียนชูโล่สายไหนที่เหมาะกับคุณ!
         </div>

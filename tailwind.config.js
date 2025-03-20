@@ -9,7 +9,8 @@ export default {
       },
       colors: {
         'anakotmai-orange': 'rgb(246, 131, 74)',
-        'anakotmai-background': 'rgb(45, 45, 64)'
+        'anakotmai-background': 'rgb(45, 45, 64)',
+        'anakotmai-black': 'rgb(0,0,0)'
       }
     },
   },
