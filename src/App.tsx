@@ -44,7 +44,8 @@ function App() {
     { "text-4xl": !largeScreen && !mediumScreen },
     { "text-2xl": mediumScreen },
     { "text-xl": smallScreen },
-    { "word-spacing-1": true }
+    { "word-spacing-1": true },
+    { "mb-4": true }
   );
 
   return (
